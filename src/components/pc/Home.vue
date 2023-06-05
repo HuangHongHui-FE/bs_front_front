@@ -8,10 +8,12 @@
 					<a>funguy</a>
 				</div>
 				<div :class="$route.path === '/study'?'on': ''" @click="switchTo('/study')">
-					<a>resource</a>
+					<!-- <a>resource</a> -->
+					<a>资源</a>
 				</div>
 				<div :class="$route.path.split('/')[1] === 'share'?'on': ''" @click="switchTo('/share')">
-					<a>share</a>
+					<!-- <a>share</a> -->
+					<a>分享</a>
 				</div>
 
 				<span :class="$route.path.split('/')[1] === 'user'? 'on_img': ''">

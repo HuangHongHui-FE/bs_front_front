@@ -3,7 +3,8 @@
 		<!-- 左边中间悬浮的 -->
 		<div class="gd1">
 			<div :class="$route.path === '/funguy/grzl'? 'on':''" @click="switchTo('/funguy/grzl')">
-				<a>个人资料<i class="iconfont icon-gerenziliao"></i></a>
+				<!-- <a>个人资料<i class="iconfont icon-gerenziliao"></i></a> -->
+				<a>资料区<i class="iconfont icon-gerenziliao"></i></a>
 			</div>
 			<div :class="$route.path === '/funguy/tpq'? 'on':''" @click="switchTo('/funguy/tpq')">	
 				<a>图片区&nbsp;&nbsp;<i class="iconfont icon-tupian"></i></a>

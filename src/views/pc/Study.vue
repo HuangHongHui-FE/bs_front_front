@@ -3,7 +3,7 @@
 		<div class="main">
 			<div class="itemDiv">
 				<!-- 主分类标题 -->
-				<h3>资源分享</h3>
+				<h3>网站分享</h3>
 				<!-- 内容 -->
 				<template>
 					<swiper class="swiper" :options="swiperOption">
@@ -26,7 +26,7 @@
 			<!-- 好玩的 -->
 			<div class="itemDiv">
 				<!-- 主分类标题 -->
-				<h3>好玩的</h3>
+				<h3>功能分享</h3>
 				<!-- 内容 -->
 				<template>
 					<swiper class="swiper" :options="swiperOption">
@@ -46,9 +46,30 @@
 				</template>
 			</div>
 
+			<!-- 好玩的 -->
+			<div class="itemDiv" v-if="false">
+				<h3>软件分享</h3>
+				<template>
+					<swiper class="swiper" :options="swiperOption">
+						<swiper-slide>
+							<div class="item" @click="goSocket">
+								<p class="item_title">聊天室</p>
+								<div class="content">
+									<img :src="img01" alt="">
+								</div>
+							</div>
+						</swiper-slide>
+
+						<div class="swiper-pagination" slot="pagination"></div>
+						<div class="swiper-button-prev" slot="button-prev"></div>
+						<div class="swiper-button-next" slot="button-next"></div>
+					</swiper>
+				</template>
+			</div>
+
 			<!-- 学习日常 -->
-			<h3 class="stutyH">学习日常</h3>
-			<div class="content_bottom">
+			<h3 class="stutyH" v-if="false">学习日常</h3>
+			<div class="content_bottom"  v-if="false">
 				
 				<div class="blogShow" v-for="(item) in dataList" :key="item.time">
 					<!-- 图片 -->
@@ -68,7 +89,7 @@
 				</div>
 			</div>
 			<!-- 分页 -->
-			<template>
+			<!-- <template>
 				<div class="block">
 					<el-pagination
 						@current-change="handleCurrentChange"
@@ -78,7 +99,7 @@
 						:total="total">
 					</el-pagination>
 				</div>
-			</template>
+			</template> -->
 			
 		</div>
 	</div>
@@ -116,9 +137,9 @@ import 'swiper/css/swiper.css'
 				dataList: [],
 				id: '',
 				// 分页
-				currentPage: 1,
+				// currentPage: 1,
 				// 总条数
-				total: 0,
+				// total: 0,
 				// 资源数据
 				resourceList: []
 			}
@@ -164,10 +185,10 @@ import 'swiper/css/swiper.css'
 				this.id = ''
 				return this.$message.success("删除blog成功！")
 			},
-			handleCurrentChange(val) {
-				this.currentPage = val
-				this.selfBlogGet()
-			},
+			// handleCurrentChange(val) {
+			// 	this.currentPage = val
+			// 	this.selfBlogGet()
+			// },
 			// 博客详情页面
 			blogContent(_id){
 				const obj = this.$router.resolve({
@@ -228,6 +249,7 @@ import 'swiper/css/swiper.css'
 						img{
 							height: 100%;
 							width: auto;
+							border-radius: 40%;
 						}
 					}
 				}

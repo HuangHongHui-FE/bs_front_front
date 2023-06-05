@@ -3,8 +3,10 @@
 		<div class="maxDiv">
 			<!-- 左边的两个item -->
 			<div class="left">
-				<div :class="$route.path === '/share/blogs'? 'on': ''" @click="switchTo('/share/blogs')">blogs</div>
-				<div :class="$route.path === '/share/leonard'? 'on': ''" @click="switchTo('/share/leonard')">Leonard</div>
+				<!-- <div :class="$route.path === '/share/blogs'? 'on': ''" @click="switchTo('/share/blogs')">blogs</div> -->
+				<div :class="$route.path === '/share/blogs'? 'on': ''" @click="switchTo('/share/blogs')">博客</div>
+				<!-- <div :class="$route.path === '/share/leonard'? 'on': ''" @click="switchTo('/share/leonard')">Leonard</div> -->
+				<div :class="$route.path === '/share/leonard'? 'on': ''" @click="switchTo('/share/leonard')">图片</div>
 			</div>
 			<!-- 右边的搜索框 -->
 			<div class="right" v-if="$route.path === '/share/blogs'">

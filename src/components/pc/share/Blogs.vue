@@ -43,7 +43,7 @@
                         <el-pagination
                             @current-change="handleCurrentChange"
                             :current-page="currentPage"
-                            :page-size="20"
+                            :page-size="10"
                             layout="total, prev, pager, next, jumper"
                             :total="total"
                         >
@@ -57,7 +57,7 @@
                         <el-pagination
                             @current-change="handleCurrentChangeClassify"
                             :current-page="classifyPage"
-                            :page-size="20"
+                            :page-size="10"
                             layout="total, prev, pager, next, jumper"
                             :total="classifyTotal"
                         >
